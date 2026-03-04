@@ -19,7 +19,8 @@ export default defineNuxtConfig({
       { code: 'zh', iso: 'zh-CN', name: '中文' }
     ],
     defaultLocale: 'en',
-    strategy: 'prefix_except_default'
+    strategy: 'prefix_except_default',
+    baseUrl: 'https://regret-H.github.io'
   },
   sitemap: {
     // xsl: false,
