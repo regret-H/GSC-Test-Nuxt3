@@ -35,6 +35,13 @@ export default defineNuxtConfig({
     output: {
       dir: 'dist'
     },
+    publicAssets: [
+      {
+        baseURL: '/',
+        dir: './',
+        files: ['.nojekyll']
+      }
+    ],
     prerender: {
       routes: [
         '/',
