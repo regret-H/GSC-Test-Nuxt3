@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  app: {
+    baseURL: '/GSC-Test-Nuxt3/',
+    buildAssetsDir: '/assets/'
+  },
   site: {
     url: 'https://regret-H.github.io/GSC-Test-Nuxt3/'
   },
@@ -27,6 +31,9 @@ export default defineNuxtConfig({
   ssr: true,
   nitro: {
     preset: 'static',
+    output: {
+      dir: 'dist'
+    },
     prerender: {
       routes: [
         '/',
