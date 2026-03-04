@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     buildAssetsDir: '/assets/'
   },
   site: {
-    url: 'https://regret-H.github.io/GSC-Test-Nuxt3/'
+    url: 'https://regret-H.github.io/'
   },
   modules: [
     '@nuxtjs/i18n',
@@ -24,10 +24,16 @@ export default defineNuxtConfig({
   },
   sitemap: {
     xsl: false,
-    autoLastmod: true,
+    autoLastmod: false,
     sortEntries: true,
     sitemaps: false,
-    autoI18n: true
+    excludeAppSources: true,
+    urls: [
+      '/',
+      '/series',
+      '/zh/',
+      '/zh/series'
+    ]
   },
   ssr: true,
   nitro: {
@@ -35,12 +41,6 @@ export default defineNuxtConfig({
     output: {
       dir: 'dist'
     },
-    publicAssets: [
-      {
-        baseURL: '/',
-        dir: './'
-      }
-    ],
     prerender: {
       routes: [
         '/',
@@ -51,3 +51,4 @@ export default defineNuxtConfig({
     }
   }
 })
+
