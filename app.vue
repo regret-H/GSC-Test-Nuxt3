@@ -27,6 +27,14 @@
 <script setup>
 import { ref, computed } from 'vue'
 const { locale, setLocale } = useI18n()
+useHead({
+  meta: [
+    {
+      name: 'google-site-verification',
+      content: 'dqa4YEhRzAeYdFGjUC7K8WZfmh-d4CS3ljsNsc3pZus'
+    }
+  ]
+})
 const selectedLocale = ref(locale.value)
 
 const homeText = computed(() => {
