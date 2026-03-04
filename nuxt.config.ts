@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     baseUrl: 'https://regret-H.github.io'
   },
   sitemap: {
-    // xsl: false,
+    xsl: false,
     autoLastmod: true,
     sortEntries: true,
     sitemaps: false,
@@ -38,8 +38,7 @@ export default defineNuxtConfig({
     publicAssets: [
       {
         baseURL: '/',
-        dir: './',
-        files: ['.nojekyll']
+        dir: './'
       }
     ],
     prerender: {
